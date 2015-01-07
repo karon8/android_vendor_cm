@@ -1,16 +1,13 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+#Inherit common one stuff
+$(call inherit-product, vendor/one/config/common.mk)
 
-# Bring in all video files
-$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
+# Include one audio files
+include vendor/one/config/one_audio.mk
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include one LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/one/overlay/dictionaries
 
-# Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
-
-# Optional CM packages
+# Optional one packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -21,18 +18,9 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     VisualizationWallpapers \
     PhotoTable \
-    SoundRecorder \
-    PhotoPhase
+    SoundRecorder
 
-PRODUCT_PACKAGES += \
-    VideoEditor \
-    libvideoeditor_jni \
-    libvideoeditor_core \
-    libvideoeditor_osal \
-    libvideoeditor_videofilters \
-    libvideoeditorplayer
-
-# Extra tools in CM
+# Extra tools in MK
 PRODUCT_PACKAGES += \
     vim \
     zip \
