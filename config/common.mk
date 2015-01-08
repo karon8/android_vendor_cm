@@ -92,6 +92,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
+# One prebuilt
+PRODUCT_COPY_FILES += \
+    vendor/one/prebuilt/ota/verifier:system/bin/verifier \
+    vendor/one/prebuilt/common/etc/init.d/88preinstall:system/etc/init.d/88preinstall
+
 # One-specific init file
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/init.local.rc:root/init.one.rc
