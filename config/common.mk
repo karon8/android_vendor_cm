@@ -166,10 +166,10 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock
 
-# MK Hardware Abstraction Framework
+# Cyanogenmod Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
-    org.one.hardware \
-    org.one.hardware.xml
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
 
 # Extra tools in MK
 PRODUCT_PACKAGES += \
