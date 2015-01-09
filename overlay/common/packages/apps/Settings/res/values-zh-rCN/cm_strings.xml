@@ -406,7 +406,7 @@
     <string name="status_bar_battery_percentage_dialog_title">电量百分比</string>
     <string name="status_bar_battery_percentage_default">隐藏(默认)</string>
     <string name="status_bar_battery_percentage_text_inside">嵌入电量图标</string>
-    <string name="status_bar_battery_percentage_text_next">置于电量图标右侧</string>
+    <string name="status_bar_battery_percentage_text_next">置于电量图标左侧</string>
 
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">编辑指示灯设置</string>
