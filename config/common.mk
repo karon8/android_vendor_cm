@@ -276,7 +276,7 @@ ifdef ONE_BUILDTYPE
     endif
 else
     # If MK_BUILDTYPE is not defined, set to UNOFFICIAL
-    ONE_BUILDTYPE := UNOFFICIAL
+    ONE_BUILDTYPE := Official
     ONE_EXTRAVERSION :=
 endif
 
