@@ -97,6 +97,13 @@ PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/ota/verifier:system/bin/verifier \
     vendor/one/prebuilt/common/etc/init.d/88preinstall:system/etc/init.d/88preinstall
 
+# One APPS prebuilt
+PRODUCT_COPY_FILES += \
+    vendor/one/prebuilt/common/app/SougouInput/SougouInput.apk:system/app/SougouInput/SougouInput.apk \
+    vendor/one/prebuilt/common/app/SougouInput/lib/arm/libkpencore_v71.so:system/app/SougouInput/lib/arm/libkpencore_v71.so \
+    vendor/one/prebuilt/common/app/SougouInput/lib/arm/libNinepatch.so:system/app/SougouInput/lib/arm/libNinepatch.so \
+    vendor/one/prebuilt/common/app/SougouInput/lib/arm/libwebp.so:system/app/SougouInput/lib/arm/libwebp.so
+
 # One-specific init file
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/init.local.rc:root/init.one.rc
@@ -160,7 +167,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
     Launcher3 \
-    MoKeeLauncher \
+    Trebuchet \
     AudioFX \
     CMFileManager \
     Eleven \
@@ -275,8 +282,9 @@ ifdef ONE_BUILDTYPE
         ONE_EXTRAVERSION := -$(ONE_EXTRAVERSION)
     endif
 else
-    # If MK_BUILDTYPE is not defined, set to UNOFFICIAL
+    # If ONE_BUILDTYPE is not defined, set to Official
     ONE_BUILDTYPE := Official
+    WITH_DEXPREOPT := true
     ONE_EXTRAVERSION :=
 endif
 
