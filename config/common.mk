@@ -283,7 +283,7 @@ ifdef ONE_BUILDTYPE
     endif
 else
     # If ONE_BUILDTYPE is not defined, set to Official
-    ONE_BUILDTYPE := Official
+    ONE_BUILDTYPE := OFFICIAL
     WITH_DEXPREOPT := true
     ONE_EXTRAVERSION :=
 endif
