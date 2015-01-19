@@ -99,7 +99,7 @@ PRODUCT_COPY_FILES += \
 
 # One APPS prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/gapps-faceunlock_lollipop.zip:system/addon.d/gapps-faceunlock_lollipop.zip
+    vendor/one/prebuilt/common/gapps-faceunlock_lollipop.zip:system/addon.d/gapps-faceunlock_lollipop.zip
 
 # One-specific init file
 PRODUCT_COPY_FILES += \
