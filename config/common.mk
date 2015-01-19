@@ -99,10 +99,7 @@ PRODUCT_COPY_FILES += \
 
 # One APPS prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/one/prebuilt/common/app/SougouInput/SougouInput.apk:system/app/SougouInput/SougouInput.apk \
-    vendor/one/prebuilt/common/app/SougouInput/lib/arm/libkpencore_v71.so:system/app/SougouInput/lib/arm/libkpencore_v71.so \
-    vendor/one/prebuilt/common/app/SougouInput/lib/arm/libNinepatch.so:system/app/SougouInput/lib/arm/libNinepatch.so \
-    vendor/one/prebuilt/common/app/SougouInput/lib/arm/libwebp.so:system/app/SougouInput/lib/arm/libwebp.so
+    vendor/bliss/prebuilt/common/gapps-faceunlock_lollipop.zip:system/addon.d/gapps-faceunlock_lollipop.zip
 
 # One-specific init file
 PRODUCT_COPY_FILES += \
