@@ -1,9 +1,9 @@
-CyanogenMod
+Android One
 ===============
 
-Visit http://github.com/CyanogenMod for full source and git access.
+Visit http://github.com/karon8 for full source and git access.
 
-Visit http://review.cyanogenmod.org for our Gerrit instance.
+Visit http://www.aoidone.com for HomePage.
 
 CHANGELOG (notable new features)
 ---------
