@@ -15,9 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 # By karon
-PRELOAD_DEST=/data/app  
-PRELOAD_FLAG=${PRELOAD_DEST}/.thirdapp  
-PRELOAD_SOURCE=/system/third-app  
+PRELOAD_DEST=/data/app
+PRELOAD_FLAG=/data/.AoidOneAPP
+PRELOAD_SOURCE=/system/third-app
   
 if [ ! -d ${PRELOAD_DEST} ]  
 then  
@@ -30,5 +30,5 @@ then
     for i in ${files};do  
         cat  ${PRELOAD_SOURCE}/${i} > ${PRELOAD_DEST}/${i}  
     done  
-    echo "Android One" > ${PRELOAD_FLAG}  
+    echo "true" > ${PRELOAD_FLAG}  
 fi  
