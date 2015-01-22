@@ -1,7 +1,10 @@
-PRODUCT_BRAND ?= one
+PRODUCT_BRAND ?= android one
 
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
+
+MOKEEHELPER_EMBEDDED := true
+MOKEEHELPER_PACKAGE_PREFIX := com.android.settings.mokee.mokeehelper
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
@@ -68,7 +71,7 @@ endif
 
 # Copy over the changelog and translator to the device
 PRODUCT_COPY_FILES += \
-    vendor/one/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    vendor/one/CHANGELOG.mkdn:system/etc/CHANGELOG-ONE.txt
 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
@@ -96,10 +99,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/ota/verifier:system/bin/verifier \
     vendor/one/prebuilt/common/etc/init.d/88preinstall:system/etc/init.d/88preinstall
-
-# One APPS prebuilt
-PRODUCT_COPY_FILES += \
-    vendor/one/prebuilt/common/gapps-faceunlock_lollipop.zip:system/addon.d/gapps-faceunlock_lollipop.zip
 
 # One-specific init file
 PRODUCT_COPY_FILES += \
@@ -281,7 +280,6 @@ ifdef ONE_BUILDTYPE
 else
     # If ONE_BUILDTYPE is not defined, set to Official
     ONE_BUILDTYPE := OFFICIAL
-    WITH_DEXPREOPT := true
     ONE_EXTRAVERSION :=
 endif
 

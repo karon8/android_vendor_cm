@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015 The New One Android
+     Copyright (C) 2015 The Android One
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -35,8 +35,8 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService$ActiveReceiver</item>
     </string-array>
 
-    <string name="config_mms_user_agent">New One Android</string>
-    <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+    <string name="config_mms_user_agent">Android One</string>
+    <string name="config_mms_user_agent_profile_url">http://www.aoidone.com</string>
 
     <!-- Automatic power profile management per app.
          Each item should list the fully-qualified activity

@@ -1,4 +1,4 @@
-# New One Android Extras
+# Android One Extras
 import /init.superuser.rc
 
 on init
@@ -11,8 +11,7 @@ on post-fs-data
     chmod 0771 /cache/dalvik-cache
     mkdir /data/.ssh 0750 root shell
 
-    # Run sysinit
-    start sysinit
+start sysinit
 
 on boot
     # interactive governor
@@ -114,8 +113,6 @@ on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
 
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
-    user root
-    oneshot
-    disabled
+service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
+disabled
+oneshot

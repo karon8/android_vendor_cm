@@ -3,4 +3,4 @@
 # Print startup info
 #
 L="log -p i -t one"
-$L "Welcome to Android `getprop ro.build.version.release` / New One-`getprop ro.one.version`";
+$L "Welcome to Android `getprop ro.build.version.release` / Android One-`getprop ro.one.version`";
