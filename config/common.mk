@@ -119,6 +119,9 @@ PRODUCT_COPY_FILES += $(shell test -d vendor/one/prebuilt/third/app && \
     find vendor/one/prebuilt/third/app -name '*.apk' \
     -printf '%p:system/third-app/%f ')
 
+PRODUCT_COPY_FILES += \
+    vendor/one/prebuilt/One/app/One/One.apk:system/app/One/One.apk
+
 # Google IME
 ifneq ($(TARGET_EXCLUDE_GOOGLE_IME),true)
 PRODUCT_COPY_FILES += \

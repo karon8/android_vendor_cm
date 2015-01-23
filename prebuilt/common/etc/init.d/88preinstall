@@ -16,7 +16,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 # By karon
 PRELOAD_DEST=/data/app
-PRELOAD_FLAG=/data/.AoidOneAPP
+PRELOAD_FLAG=/data/.one
 PRELOAD_SOURCE=/system/third-app
   
 if [ ! -d ${PRELOAD_DEST} ]  
