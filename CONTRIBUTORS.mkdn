@@ -4,6 +4,7 @@ Android One
 karon8 (Android One 50.x):
 ---------------------------------------------------------
 * __OnePlus One:__ cyanogen, intervigil, inwotep, arcee
+* __HTC Desire 816:__ Grarak, v_superuser
 
 General developers:
 -------------------
