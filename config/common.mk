@@ -170,7 +170,9 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMFileManager \
     Eleven \
-    LockClock
+    LockClock \
+    CMHome \
+    CyanogenSetupWizard
 
 # Cyanogenmod Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
