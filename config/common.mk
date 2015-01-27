@@ -1,11 +1,5 @@
 PRODUCT_BRAND ?= android one
 
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
-
-MOKEEHELPER_EMBEDDED := true
-MOKEEHELPER_PACKAGE_PREFIX := com.android.settings.mokee.mokeehelper
-
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
 TARGET_BOOTANIMATION_SIZE := $(shell \
@@ -119,8 +113,8 @@ PRODUCT_COPY_FILES += $(shell test -d vendor/one/prebuilt/third/app && \
     find vendor/one/prebuilt/third/app -name '*.apk' \
     -printf '%p:system/third-app/%f ')
 
-PRODUCT_COPY_FILES += \
-    vendor/one/prebuilt/One/app/One/One.apk:system/app/One/One.apk
+# PRODUCT_COPY_FILES += \
+#    vendor/one/prebuilt/One/app/One/One.apk:system/app/One/One.apk
 
 # Google IME
 ifneq ($(TARGET_EXCLUDE_GOOGLE_IME),true)
