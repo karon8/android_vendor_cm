@@ -10,12 +10,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
-
 # Telephony packages
 PRODUCT_PACKAGES += \
     Mms \
     Stk \
-    CellBroadcastReceiver
+    CellBroadcastReceiver \
+    WhisperPush
 
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
@@ -23,4 +23,4 @@ PRODUCT_PACKAGES += \
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Titania.ogg
+    ro.config.ringtone=Orion.ogg

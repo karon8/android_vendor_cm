@@ -18,9 +18,10 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     VisualizationWallpapers \
     PhotoTable \
-    SoundRecorder
+    SoundRecorder \
+    PhotoPhase
 
-# Extra tools in MK
+# Extra tools in CM
 PRODUCT_PACKAGES += \
     vim \
     zip \
