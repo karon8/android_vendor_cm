@@ -277,7 +277,6 @@
     <string name="cmupdate_settings_title">CyanogenMod更新</string>
 
     <!-- About phone screen, CyanogenMod version -->
-    <string name="mod_version">CyanogenMod版本</string>
     <string name="mod_version_default">未知</string>
     <string name="model_name">手机型号</string>
 
