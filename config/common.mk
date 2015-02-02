@@ -129,10 +129,6 @@ PRODUCT_COPY_FILES +=  \
     vendor/one/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/one/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-# One PhoneLoc Database
-PRODUCT_COPY_FILES +=  \
-    vendor/one/prebuilt/common/media/one-phoneloc.dat:system/media/one-phoneloc.dat
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -141,19 +137,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# This is MK!
+# This is one!
 PRODUCT_COPY_FILES += \
     vendor/one/config/permissions/com.one.android.xml:system/etc/permissions/com.one.android.xml
 
 # T-Mobile theme engine
 include vendor/one/config/themes_common.mk
 
-# Required MK packages
+# Required one packages
 PRODUCT_PACKAGES += \
     Development \
     BluetoothExt
 
-# Optional MK packages
+# Optional one packages
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
@@ -179,7 +175,7 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
-# Extra tools in MK
+# Extra tools in one
 PRODUCT_PACKAGES += \
     libsepol \
     openvpn \
@@ -253,56 +249,12 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/one/overlay/common
 PRODUCT_VERSION_MAJOR = 50
 PRODUCT_VERSION_MINOR = 2
 PRODUCT_VERSION_MAINTENANCE = 0
-
-# Set MK_BUILDTYPE and Odex support
-ifneq ($(filter newone buildbot-0x,$(shell python -c 'import os;print os.uname()[1][:11]')),)
-
-    ifdef ONE_NIGHTLY
-        ONE_BUILDTYPE := NIGHTLY
-    endif
-    ifdef ONE_EXPERIMENTAL
-        ONE_BUILDTYPE := EXPERIMENTAL
-    endif
-    ifdef ONE_RELEASE
-        ONE_BUILDTYPE := RELEASE
-        WITH_DEXPREOPT := true
-    endif
-    ifdef ONE_HISTORY
-        ONE_BUILDTYPE := HISTORY
-        WITH_DEXPREOPT := true
-    endif
-endif
-
-ifdef ONE_BUILDTYPE
-    ifdef ONE_EXTRAVERSION
-        # Force build type to EXPERIMENTAL
-        ONE_BUILDTYPE := EXPERIMENTAL
-        # Remove leading dash from MK_EXTRAVERSION
-        ONE_EXTRAVERSION := $(shell echo $(ONE_EXTRAVERSION) | sed 's/-//')
-        # Add leading dash to MK_EXTRAVERSION
-        ONE_EXTRAVERSION := -$(ONE_EXTRAVERSION)
-    endif
-else
-    # If ONE_BUILDTYPE is not defined, set to Official
-    ONE_BUILDTYPE := OFFICIAL
-    ONE_EXTRAVERSION :=
-endif
-
-ifneq ($(filter RELEASE HISTORY,$(ONE_BUILDTYPE)),)
-    ifdef ONE_BUILD_DATE
-        ONE_VERSION := ONE$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(ONE_BUILD)-$(ONE_BUILD_DATE)-$(ONE_BUILDTYPE)
-    else
-        ONE_VERSION := ONE$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(ONE_BUILD)-$(shell date +%y%m%d)-$(ONE_BUILDTYPE)
-    endif
-else
-    ONE_VERSION := ONE$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(ONE_BUILD)-$(shell date +%Y%m%d%H%M)-$(ONE_BUILDTYPE)
-endif
+ONE_BUILDTYPE := OFFICIAL
+ONE_VERSION := ONE$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(ONE_BUILD)-$(shell date +%Y%m%d%H%M)-$(ONE_BUILDTYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.one.version=$(ONE_VERSION) \
   ro.modversion=$(ONE_VERSION)
-
--include vendor/mk-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build-env/image-auto-bits.mk
 
