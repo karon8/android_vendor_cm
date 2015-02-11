@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= android one
+PRODUCT_BRAND ?= oneUI
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
@@ -168,7 +168,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     CMHome \
     CyanogenSetupWizard \
-    SystemUpdate
+#    SystemUpdate
 
 # Cyanogenmod Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
