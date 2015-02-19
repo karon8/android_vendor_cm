@@ -1,4 +1,4 @@
-Android One
+OneUI
 ===============
 
 Visit http://github.com/karon8 for full source and git access.

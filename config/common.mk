@@ -94,6 +94,10 @@ PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/ota/verifier:system/bin/verifier \
     vendor/one/prebuilt/common/etc/init.d/88preinstall:system/etc/init.d/88preinstall
 
+# One PhoneLoc Database
+PRODUCT_COPY_FILES +=  \
+    vendor/one/prebuilt/common/media/one-phoneloc.dat:system/media/one-phoneloc.dat
+
 # One-specific init file
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/init.local.rc:root/init.one.rc

@@ -1,4 +1,4 @@
-Android One
+OneUI
 ===============
 
 Getting Started
