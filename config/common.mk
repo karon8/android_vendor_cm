@@ -91,7 +91,6 @@ PRODUCT_COPY_FILES += \
 
 # One prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/one/prebuilt/ota/verifier:system/bin/verifier \
     vendor/one/prebuilt/common/etc/init.d/88preinstall:system/etc/init.d/88preinstall
 
 # One PhoneLoc Database
