@@ -170,7 +170,6 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMHome \
-    CyanogenSetupWizard \
 #    SystemUpdate
 
 # Cyanogenmod Hardware Abstraction Framework
